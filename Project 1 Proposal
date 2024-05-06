@@ -1,0 +1,18 @@
+Family Planning App
+
+-	Grocery List
+  o	Add & remove items – all users
+  o	Master list for admin
+    -	Consolidated into one removing duplicates
+-	Wish List – Birthday/Christmas
+  o	Add & remove items – all users
+  o	Master list for admin
+    -	Consolidated, but allows duplicates (in case more than one user wants the same thing)
+-	Back to School Lists
+  o	Add & remove items – all users
+  o	Master list for admin
+    -	Consolidated, but allows duplicates (in case more than one user wants the same thing)
+-	Add Appointments
+  o	Add and remove items – all users
+  o	Master list for admin
+    -	Consolidated, but allows duplicates (in case more than one user wants the same thing)

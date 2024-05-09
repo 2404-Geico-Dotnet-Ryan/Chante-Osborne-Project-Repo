@@ -8,11 +8,23 @@ Family Planning App
   o	Add & remove items – all users
   o	Master list for admin
     -	Consolidated, but allows duplicates (in case more than one user wants the same thing)
--	Back to School Lists
-  o	Add & remove items – all users
-  o	Master list for admin
-    -	Consolidated, but allows duplicates (in case more than one user wants the same thing)
--	Add Appointments
-  o	Add and remove items – all users
-  o	Master list for admin
-    -	Consolidated, but allows duplicates (in case more than one user wants the same thing)
+
+
+
+Classes/Models Needed:
+1. User
+  a. int ID
+  b. string UserName
+  c. string Password
+  d. string FirstName
+  e. string LastName
+  f. bool Admin
+2. ShoppingList (Primary class)
+  - string Item
+  - int Quantity
+  - string UserId
+  - bool Purchased
+  a. GroceryList Class
+  b. WishList Class
+
+

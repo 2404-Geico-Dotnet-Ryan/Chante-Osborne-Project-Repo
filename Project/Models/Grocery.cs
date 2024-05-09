@@ -12,18 +12,19 @@ class Grocery
     }
 
     // Full Arg Constructor
-    public Grocery(string item, int quantity, int userId, bool purchsed)
+    public Grocery(string item, int quantity, int userId, bool purchased)
     {
         Item = item;
         Quantity = quantity;
         UserId = userId;
-        Purchased = purchsed;
+        Purchased = purchased;
     }
 
     // To String
     public override string ToString()
     {
         return $"{{Item: {Item},Quantity: {Quantity}, UserId: {UserId}, Purchased: {Purchased}}}";
+        // when do you wrap your variables in single quotes or double quotes for your ToString?
     }
 
 

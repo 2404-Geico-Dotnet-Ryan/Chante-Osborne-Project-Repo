@@ -12,12 +12,12 @@ class WishList
     }
 
     // Full Arg Constructor
-    public WishList(string item, int quantity, int userId, bool purchsed)
+    public WishList(string item, int quantity, int userId, bool purchased)
     {
         Item = item;
         Quantity = quantity;
         UserId = userId;
-        Purchased = purchsed;
+        Purchased = purchased;
     }
 
     // To String

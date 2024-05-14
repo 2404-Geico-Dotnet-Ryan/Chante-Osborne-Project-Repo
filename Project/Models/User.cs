@@ -5,7 +5,7 @@ class User
     public string? Password { get; set; }
     public string? FirstName { get; set; }
     public string? LastName { get; set; }
-    public bool Admin { get; set; }
+    public string? Role { get; set; }
 
     //No Arg Constructor
     public User()
@@ -14,23 +14,24 @@ class User
         Password = "";
         FirstName = "";
         LastName = "";
+        Role = "";
     }
 
     // Full Arg Constructor
-    public User(int userId, string userName, string password, string firstName, string lastName, bool admin)
+    public User(int userId, string userName, string password, string firstName, string lastName, string role)
     {
         UserId = userId;
         UserName = userName;
         Password = password;
         FirstName = firstName;
         LastName = lastName;
-        Admin = admin;
+        Role = role;
     }
 
     // ToString
     public override string ToString()
     {
-        return $"{{UserId: {UserId},UserName: {UserName},Password: {Password},FirstName: {FirstName}, LastName: {LastName}, Admin: {Admin}}}";
+        return $"{{UserId: {UserId},UserName: '{UserName}',Password: '{Password}',FirstName: '{FirstName}', LastName: '{LastName}', Role: '{Role}'}}";
     }
 
 

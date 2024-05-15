@@ -5,19 +5,19 @@ class PlantStorage
 
     public PlantStorage()
     {
-        Plant plant1 = new(idCounter, "Casa Blanca Lily", 10, 20, null); idCounter++;
-        Plant plant2 = new(idCounter, "Elsa Sass Peony", 10, 20, null); idCounter++;
-        Plant plant3 = new(idCounter, "Sarah Bernhardt Peony", 10, 20, null); idCounter++;
-        Plant plant4 = new(idCounter, "Stargazer Lily", 7, 20, null); idCounter++;
-        Plant plant5 = new(idCounter, "Purple Bearded Iris", 7, 20, null); idCounter++;
-        Plant plant6 = new(idCounter, "Miniature Daffodil", 5, 20, null); idCounter++;
-        Plant plant7 = new(idCounter, "Daylily Yellow", 7, 20, null); idCounter++;
-        Plant plant8 = new(idCounter, "Daylily Pink", 7, 20, null); idCounter++;
-        Plant plant9 = new(idCounter, "Gardenia", 15, 20, null); idCounter++;
-        Plant plant10 = new(idCounter, "ZZ Plant", 15, 20, null); idCounter++;
-        Plant plant11 = new(idCounter, "Bamboo", 5, 20, null); idCounter++;
-        Plant plant12 = new(idCounter, "White Orchid", 10, 20, null); idCounter++;
-        Plant plant13 = new(idCounter, "Fiddle-Leaf Fig", 20, 20, null); idCounter++;
+        Plant plant1 = new(idCounter, "Casa Blanca Lily", 10, true, null); idCounter++;
+        Plant plant2 = new(idCounter, "Elsa Sass Peony", 10, true, null); idCounter++;
+        Plant plant3 = new(idCounter, "Sarah Bernhardt Peony", 15, true, null); idCounter++;
+        Plant plant4 = new(idCounter, "Stargazer Lily", 7, true, null); idCounter++;
+        Plant plant5 = new(idCounter, "Purple Bearded Iris", 7, true, null); idCounter++;
+        Plant plant6 = new(idCounter, "Miniature Daffodil", 5, true, null); idCounter++;
+        Plant plant7 = new(idCounter, "Daylily Yellow", 7, true, null); idCounter++;
+        Plant plant8 = new(idCounter, "Daylily Pink", 7, true, null); idCounter++;
+        Plant plant9 = new(idCounter, "Gardenia", 15, true, null); idCounter++;
+        Plant plant10 = new(idCounter, "ZZ Plant", 15, true, null); idCounter++;
+        Plant plant11 = new(idCounter, "Bamboo", 5, true, null); idCounter++;
+        Plant plant12 = new(idCounter, "White Orchid", 10, true, null); idCounter++;
+        Plant plant13 = new(idCounter, "Fiddle-Leaf Fig", 20, true, null); idCounter++;
     
         plants = []; 
         plants.Add(plant1.Id, plant1);    

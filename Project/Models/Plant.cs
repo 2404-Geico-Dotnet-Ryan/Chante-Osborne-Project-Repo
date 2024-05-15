@@ -5,7 +5,7 @@ class Plant
     public int Id { get; set; }
     public string PlantName { get; set; }
     public double Price { get; set; }
-    public int Quantity { get; set; }
+    public bool Available { get; set; }
     public User? Buyer { get; set; }
 
     // No Arg Constructor
@@ -15,18 +15,19 @@ class Plant
     }
 
     // Full Arg Constructor
-    public Plant(int id, string plantName, double price, int quantity, User buyer)
+    public Plant(int id, string plantName, double price, bool available, User? buyer)
     {
         Id = id;
         PlantName = plantName;
         Price = price;
-        Quantity = quantity;
+        Available = available;
         Buyer = buyer;
+        
     }
 
     public override string ToString()
     {
-        return $"{{Id: {Id},Plant Name: '{PlantName}',Price: {Price},Quantity: {Quantity},Buyer: '{Buyer}'}}";
+        return $"{{Id: {Id},Plant Name: '{PlantName}',Price: {Price}, Available: {Available},Buyer: '{Buyer}'}}";
     }
 
 }

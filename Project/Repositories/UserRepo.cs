@@ -35,7 +35,7 @@ class UserRepo
     }
 
     // Update
-    public User UpdateUser(User updatedUser)
+    public User? UpdateUser(User updatedUser)
     {
         try
         {

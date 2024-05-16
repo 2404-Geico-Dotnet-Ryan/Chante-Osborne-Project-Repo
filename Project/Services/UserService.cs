@@ -2,6 +2,13 @@ class UserService
 {
     UserRepo ur = new();
 
+    /*
+        Services Needed for User:
+
+        - Register New User
+        - Login
+    */
+
     // Register
     public User? RegisterUser(User u)
     {

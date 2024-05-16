@@ -2,15 +2,6 @@ using System.Collections.Immutable;
 
 class PlantRepo
 {
-    /*
-    - CRUD Operations
-        - C - Create
-        - R - Read
-        - U - Update
-        - D - Delete
-    */
-
-
     PlantStorage plantStorage = new();
 
     // Create/Add

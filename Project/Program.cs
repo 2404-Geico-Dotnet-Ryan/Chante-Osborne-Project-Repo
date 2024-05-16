@@ -57,11 +57,12 @@ class Program
             System.Console.WriteLine("[1] View Our Inventory");
             System.Console.WriteLine("[2] Purchase a Plant");
             System.Console.WriteLine("[3] View Previous Purchases");
-            System.Console.WriteLine("[0] Logout");
+            System.Console.WriteLine("[4] Logout");
+            System.Console.WriteLine("[0] Close Application");
             System.Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
             int input = int.Parse(Console.ReadLine() ?? "0");
-            ValidateMenuSelection(input, 3);
+            ValidateMenuSelection(input, 4);
             keepGoing = NextSelection(input);
         }
     }
@@ -85,6 +86,13 @@ class Program
                     ViewPurchaseHistory();
                     break;
                 }
+            case 4:
+                {
+                    currentUser = null;
+                    welcome();
+                    askUserForLoginCredentials();
+                    break;
+                }
             case 0:
             default:
                 {
@@ -100,7 +108,7 @@ class Program
         // Returns prompt for user to select a valid menu option, if selection is out of range.
         while (selection < 0 || selection > maxSelection)
         {
-            System.Console.WriteLine($"Invalid Selection - Please Select an Option 1-{maxSelection}; or 0 to Logout");
+            System.Console.WriteLine($"Invalid Selection - Please Select an Option 1-{maxSelection}; or 0 to Close Application");
             selection = int.Parse(Console.ReadLine() ?? "0");
         }
         // Returns customer selection if valid.

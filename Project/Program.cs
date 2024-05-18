@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 
 class Program
 {
@@ -21,8 +22,62 @@ class Program
         Thread.Sleep(milliseconds);
         System.Console.WriteLine("Let's get you logged in, so you can take a look around our shop!");
         Thread.Sleep(milliseconds);
+        // System.Console.WriteLine("If you need to register, please enter 'R' to register for a new account. Otherwise, press any key to continue.");
+        // string register = (Console.ReadLine()?? "0");
+        // if (register == "R")
+        // {
+        //     RegisterNewUser();
+        // }
+        
+        // COMMENTED OUT REGISTER-- Need to handle nulls in registration process, customer is still able to access main menu
+        // after hitting enter over and over
     }
 
+    public static void RegisterNewUser()
+    {
+        User u = CreateNewUser();
+        
+    }
+
+    private static User CreateNewUser()
+    {
+        User u = new();
+        u.Role = "user";
+        System.Console.WriteLine("Let's get your account set up!");
+        System.Console.WriteLine("Please enter your First Name: ");
+        u.FirstName = Console.ReadLine();
+        System.Console.WriteLine("Great! What's your Last Name?");
+        u.LastName = Console.ReadLine();
+        System.Console.WriteLine("Please enter a User ID: ");
+        u.UserName = Console.ReadLine();
+        u.Password = CreatePassword();
+        us.RegisterUser(u);
+        return u;
+    }
+
+    public static string? CreatePassword()
+    {
+        System.Console.WriteLine("Enter a password: ");
+        string password = Console.ReadLine();
+        if (password != null)
+        {
+            System.Console.WriteLine("Please Re-enter password: ");
+            string confirmPassword = (Console.ReadLine()?? "0");
+            if (confirmPassword == password)
+            {
+                return password;
+            }
+            else 
+            {
+                return null;
+            }
+        }
+        else
+        {
+            return null;
+        }
+
+    }
     public static void askUserForLoginCredentials()
     {
         System.Console.WriteLine("Please enter your User ID");
@@ -83,7 +138,7 @@ class Program
                 }
             case 3:
                 {
-                    ViewPurchaseHistory();
+                    ViewPurchaseHistory(currentUser);
                     break;
                 }
             case 4:
@@ -149,12 +204,12 @@ class Program
                 string confirmation = (Console.ReadLine() ?? "N");
                 if (confirmation == "Y")
                 {
-                    plant = ps.BuyPlant(plant);
+                    plant = ps.BuyPlant(plant, currentUser);
                     if (plant != null)
                     {
-                        plant.Buyer = currentUser; // This is not updating anything :( Might be an update in SQL that we haven't discussed yet.
+                        //plant.Buyer = currentUser; // This is not updating anything :( Might be an update in SQL that we haven't discussed yet.
                         promptUser = false;
-                        System.Console.WriteLine($"Congrats! Your purchase for {plant.PlantName} is complete!");
+                        System.Console.WriteLine($"Congrats {plant.Buyer}! Your purchase for {plant.PlantName} is complete!");
                         System.Console.WriteLine();
                         System.Console.WriteLine();
                     }
@@ -189,11 +244,15 @@ class Program
         return retrievedPlant;
     }
 
-    public static void ViewPurchaseHistory()
+    public static void ViewPurchaseHistory(User currentUser)
     {
-        List<Plant> purchases = ps.PurchaseHistory(currentUser);
-        System.Console.WriteLine(purchases);
-        System.Console.WriteLine();
+        System.Console.WriteLine("***THIS FEATURE IS UNDER CONSTRUCTION***");
+        // List<Plant> purchases = ps.PurchaseHistory(currentUser);
+        // for (int i = 0; i <= purchases.Count; i ++)
+        // {
+        //     System.Console.WriteLine(purchases[i]);
+        // }
+        // System.Console.WriteLine();
 
     }
 

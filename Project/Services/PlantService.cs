@@ -36,7 +36,7 @@ class PlantService
         return pr.GetPlant(id);
     }
 
-    public Plant BuyPlant(Plant p)
+    public Plant BuyPlant(Plant p, User u)
     {
         if (!p.Available)
         {
@@ -44,14 +44,13 @@ class PlantService
             return null;
         }
         p.Available = false;
-        // p.Buyer = currentUser; // this is not working - I need to add the currentUser variable here, but how do I get it to make sense in this context??
-        // Got error when attempting to update this property in program.
+        p.Buyer = u;
         return p;
     }
 
     public List<Plant> PurchaseHistory(User u)
     {
-        // Create list of all plants by calling GetAllPlants method
+        // Create list of all plants by calling GetAllPlants method 
         List<Plant> allPlants = pr.GetAllPlants();
         // Create empty List for buyer's plants
         List<Plant> buyersPlants = new();
@@ -61,11 +60,11 @@ class PlantService
             {
                 buyersPlants.Add(p);
             }
-            else
-            {
-                System.Console.WriteLine("There are no items here.");
-                return null;
-            }
+            // else
+            // {
+            //     System.Console.WriteLine("There are no items here.");
+            //     return null;
+            // }
         }
         return buyersPlants;
 

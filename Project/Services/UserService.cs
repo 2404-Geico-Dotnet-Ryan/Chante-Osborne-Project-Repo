@@ -30,6 +30,11 @@ class UserService
                 return null; // reject them
             }
         }
+        if (u.Password == null)
+        {
+            System.Console.WriteLine("Invalid password. Please try again.");
+            return null;
+        }
 
         // If we make it this far, then we are saying that the role is good to go and username is good to go
         return ur.AddUser(u);
@@ -54,6 +59,5 @@ class UserService
         System.Console.WriteLine("Invalid UserName / Password combo. Please try again.");
         return null;
     }
-
 
 }

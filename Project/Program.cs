@@ -81,9 +81,9 @@ class Program
     public static void askUserForLoginCredentials()
     {
         System.Console.WriteLine("Please enter your User ID");
-        string userId = (Console.ReadLine() ?? "0");
+        string userId = Console.ReadLine() ?? "0";
         System.Console.WriteLine("Please enter your Password");
-        string password = (Console.ReadLine() ?? "0");
+        string password = Console.ReadLine() ?? "0";
         validateUserLogin(userId, password);
         System.Console.WriteLine();
     }
@@ -200,21 +200,21 @@ class Program
             if (plant != null)
             {
                 System.Console.WriteLine($"Please confirm you want to purchase the {plant.PlantName}.");
-                System.Console.WriteLine($"Enter 'Y' to purchase or 'N' to enter a different plant.");
-                string confirmation = (Console.ReadLine() ?? "N");
-                if (confirmation == "Y")
+                System.Console.WriteLine($"Enter 'Y' to purchase, 'N' to enter a different plant, or any other key to return to the main menu.");
+                string confirmation = Console.ReadLine() ?? "N";
+                if (confirmation == "Y" || confirmation =="y")
                 {
                     plant = ps.BuyPlant(plant, currentUser);
                     if (plant != null)
                     {
                         //plant.Buyer = currentUser; // This is not updating anything :( Might be an update in SQL that we haven't discussed yet.
                         promptUser = false;
-                        System.Console.WriteLine($"Congrats {plant.Buyer}! Your purchase for {plant.PlantName} is complete!");
+                        System.Console.WriteLine($"Thank you, {plant.Buyer.FirstName}! Your purchase for {plant.PlantName} is complete!");
                         System.Console.WriteLine();
-                        System.Console.WriteLine();
+
                     }
                 }
-                else if (confirmation == "N")
+                else if (confirmation == "N" || confirmation == "n")
                 {
                     plant = null;
                     PurchasePlant();
@@ -235,24 +235,35 @@ class Program
         while (retrievedPlant == null)
         {
             System.Console.WriteLine("Please enter a Plant ID or enter 0 to return to the main menu: ");
-            int input = int.Parse(Console.ReadLine() ?? "0");
-
-            if (input == 0) return null;
-
-            retrievedPlant = ps.GetPlant(input);
+            string input = Console.ReadLine()?? "0"; 
+            int plantId; // Creating int variable to use for GetPlant method
+            if (String.IsNullOrEmpty(input)) // returns null if customer presses ENTER to prevent error
+            {
+                return null;
+            }
+            try
+            {
+            plantId = int.Parse(input);
+            if (plantId == 0) return null;
+            retrievedPlant = ps.GetPlant(plantId);
+            }
+            catch (FormatException) // handles exception for anything other than an int
+            {
+                System.Console.WriteLine("Invalid Plant Id."); 
+            }
         }
         return retrievedPlant;
     }
 
     public static void ViewPurchaseHistory(User currentUser)
     {
-        System.Console.WriteLine("***THIS FEATURE IS UNDER CONSTRUCTION***");
-        // List<Plant> purchases = ps.PurchaseHistory(currentUser);
-        // for (int i = 0; i <= purchases.Count; i ++)
-        // {
-        //     System.Console.WriteLine(purchases[i]);
-        // }
-        // System.Console.WriteLine();
+        // System.Console.WriteLine("***THIS FEATURE IS UNDER CONSTRUCTION***");
+        List<Plant> purchases = ps.PurchaseHistory(currentUser);
+        for (int i = 0; i < purchases.Count; i ++)
+        {
+            System.Console.WriteLine(purchases[i]);
+        }
+        System.Console.WriteLine();
 
     }
 

@@ -107,6 +107,8 @@ class Program
         bool keepGoing = true;
         while (keepGoing)
         {
+            int milliseconds = 1000;
+            Thread.Sleep(milliseconds);
             System.Console.WriteLine("Please Select an Option:");
             System.Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             System.Console.WriteLine("[1] View Our Inventory");

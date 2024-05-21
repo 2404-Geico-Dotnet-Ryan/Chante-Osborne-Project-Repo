@@ -66,6 +66,10 @@ class PlantService
             //     return null;
             // }
         }
+        if (buyersPlants.Count == 0) 
+        {
+            System.Console.WriteLine("There are no items here.");
+        }
         return buyersPlants;
 
     }

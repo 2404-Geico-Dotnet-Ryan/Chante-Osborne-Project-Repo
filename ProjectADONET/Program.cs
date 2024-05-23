@@ -16,10 +16,6 @@ class Program
         NUserRepo ur = new(connectionString);
         us = new(ur);
 
-        // Plant plant = new(0, "Oregano", 5, true, 1);
-        // pr.AddPlant(plant);
-
-
         Console.Clear();
         Welcome();
         AskUserForLoginCredentials();

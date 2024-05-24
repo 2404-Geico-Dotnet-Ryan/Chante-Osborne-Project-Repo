@@ -11,7 +11,7 @@ class NUserRepo
         _connectionString = connString;
     }
 
-    public User? AddUser(User u) // working! 
+    public User? AddUser(User u) 
     {
         using SqlConnection connection = new(_connectionString);
         connection.Open();
@@ -36,7 +36,7 @@ class NUserRepo
             return null;
         }
     }
-    public User? DeleteUser(int id) // working!
+    public User? DeleteUser(int id) 
     {
         try
         {
@@ -155,7 +155,6 @@ class NUserRepo
             //Extract the Results
             if (reader.Read())
             {
-                //for each iteration -> extract the results to a User object -> add to list.
                 User newUser = BuildUser(reader);
                 return newUser;
             }

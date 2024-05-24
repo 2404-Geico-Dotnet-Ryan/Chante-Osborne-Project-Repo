@@ -10,7 +10,7 @@ class NPlantRepo
         _connectionString = _connString;
     }
 
-    public Plant AddPlant(Plant p) // working!!
+    public Plant AddPlant(Plant p) 
     {
         using SqlConnection connection = new(_connectionString);
         connection.Open();
@@ -35,7 +35,7 @@ class NPlantRepo
         }
     }
 
-    public Plant? DeletePlant(int id) // Working!! 
+    public Plant? DeletePlant(int id) 
     {
         try
         {
@@ -68,7 +68,7 @@ class NPlantRepo
         }
     }
 
-    public List<Plant> GetAllPlants() // Needs testing
+    public List<Plant> GetAllPlants()
     {
         List<Plant> plants = [];
         try
@@ -98,7 +98,7 @@ class NPlantRepo
         }
     }
 
-    public Plant? GetPlant(int id) // Needs testing
+    public Plant? GetPlant(int id) 
     {
         try
         {
@@ -119,7 +119,6 @@ class NPlantRepo
             //Extract the Results
             if (reader.Read())
             {
-                //for each iteration -> extract the results to a User object -> add to list.
                 Plant newPlant = BuildPlant(reader);
                 return newPlant;
             }
@@ -135,7 +134,7 @@ class NPlantRepo
         }
     }
 
-    public Plant? UpdatePlant(Plant updatedPlant) // Needs testing
+    public Plant? UpdatePlant(Plant updatedPlant) 
     {
         try
         {
@@ -158,7 +157,6 @@ class NPlantRepo
             //Extract the Results
             if (reader.Read())
             {
-                //for each iteration -> extract the results to a User object -> add to list.
                 Plant newPlant = BuildPlant(reader);
                 return newPlant;
             }

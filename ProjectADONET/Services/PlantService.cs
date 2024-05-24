@@ -9,7 +9,7 @@ class PlantService
         this.pr = pr;
     }
 
-    public List<Plant> GetAvailablePlants() // working!! 
+    public List<Plant> GetAvailablePlants()  
     {
         // Create list of all plants by calling GetAllPlants method
         List<Plant> allPlants = pr.GetAllPlants();
@@ -39,7 +39,7 @@ class PlantService
         return pr.GetPlant(id);
     }
 
-    public Plant BuyPlant(Plant p, User u) //working!! 
+    public Plant BuyPlant(Plant p, User u)  
     {
         if (!p.Available)
         {
@@ -51,7 +51,7 @@ class PlantService
         return p;
     }
 
-    public List<Plant> PurchaseHistory(User u) // working!! 
+    public List<Plant> PurchaseHistory(User u)  
     {
         // Create list of all plants by calling GetAllPlants method 
         List<Plant> allPlants = pr.GetAllPlants();
@@ -72,7 +72,7 @@ class PlantService
 
     }
 
-    public Plant? UpdatePlant(Plant p) // working!! 
+    public Plant? UpdatePlant(Plant p)  
     {
         return pr.UpdatePlant(p);
     }

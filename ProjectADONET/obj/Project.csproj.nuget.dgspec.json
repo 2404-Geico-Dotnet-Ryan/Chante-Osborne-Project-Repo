@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\U88ABJ\\Revature\\Chante-Osborne-Project-Repo\\ProjectADONET\\Project.csproj": {}
+    "c:\\Users\\U88ABJ\\Revature\\Chante-Osborne-Project-Repo\\ProjectADONET\\Project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\U88ABJ\\Revature\\Chante-Osborne-Project-Repo\\ProjectADONET\\Project.csproj": {
+    "c:\\Users\\U88ABJ\\Revature\\Chante-Osborne-Project-Repo\\ProjectADONET\\Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\U88ABJ\\Revature\\Chante-Osborne-Project-Repo\\ProjectADONET\\Project.csproj",
+        "projectUniqueName": "c:\\Users\\U88ABJ\\Revature\\Chante-Osborne-Project-Repo\\ProjectADONET\\Project.csproj",
         "projectName": "Project",
-        "projectPath": "C:\\Users\\U88ABJ\\Revature\\Chante-Osborne-Project-Repo\\ProjectADONET\\Project.csproj",
+        "projectPath": "c:\\Users\\U88ABJ\\Revature\\Chante-Osborne-Project-Repo\\ProjectADONET\\Project.csproj",
         "packagesPath": "C:\\Users\\U88ABJ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\U88ABJ\\Revature\\Chante-Osborne-Project-Repo\\ProjectADONET\\obj\\",
+        "outputPath": "c:\\Users\\U88ABJ\\Revature\\Chante-Osborne-Project-Repo\\ProjectADONET\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\U88ABJ\\AppData\\Roaming\\NuGet\\NuGet.Config"

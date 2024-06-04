@@ -1,4 +1,3 @@
-
 class EFPlantRepo : IPlantRepo
 {
     private readonly AppDbContext _context;

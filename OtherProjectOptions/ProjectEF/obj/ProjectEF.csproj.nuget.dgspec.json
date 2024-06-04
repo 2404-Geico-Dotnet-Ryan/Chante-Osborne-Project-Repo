@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\U88ABJ\\Revature\\Chante-Osborne-Project-Repo\\ProjectMess\\ProjectEF\\ProjectEF.csproj": {}
+    "C:\\Users\\U88ABJ\\Revature\\Chante-Osborne-Project-Repo\\OtherProjectOptions\\ProjectEF\\ProjectEF.csproj": {}
   },
   "projects": {
-    "C:\\Users\\U88ABJ\\Revature\\Chante-Osborne-Project-Repo\\ProjectMess\\ProjectEF\\ProjectEF.csproj": {
+    "C:\\Users\\U88ABJ\\Revature\\Chante-Osborne-Project-Repo\\OtherProjectOptions\\ProjectEF\\ProjectEF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\U88ABJ\\Revature\\Chante-Osborne-Project-Repo\\ProjectMess\\ProjectEF\\ProjectEF.csproj",
+        "projectUniqueName": "C:\\Users\\U88ABJ\\Revature\\Chante-Osborne-Project-Repo\\OtherProjectOptions\\ProjectEF\\ProjectEF.csproj",
         "projectName": "ProjectEF",
-        "projectPath": "C:\\Users\\U88ABJ\\Revature\\Chante-Osborne-Project-Repo\\ProjectMess\\ProjectEF\\ProjectEF.csproj",
+        "projectPath": "C:\\Users\\U88ABJ\\Revature\\Chante-Osborne-Project-Repo\\OtherProjectOptions\\ProjectEF\\ProjectEF.csproj",
         "packagesPath": "C:\\Users\\U88ABJ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\U88ABJ\\Revature\\Chante-Osborne-Project-Repo\\ProjectMess\\ProjectEF\\obj\\",
+        "outputPath": "C:\\Users\\U88ABJ\\Revature\\Chante-Osborne-Project-Repo\\OtherProjectOptions\\ProjectEF\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\U88ABJ\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -42,6 +42,28 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

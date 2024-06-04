@@ -6,6 +6,7 @@ class User
     public string? FirstName { get; set; }
     public string? LastName { get; set; }
     public string? Role { get; set; }
+    public ICollection<Plant> Plants  {get; set; }
 
     //No Arg Constructor
     public User()
@@ -15,10 +16,11 @@ class User
         FirstName = "";
         LastName = "";
         Role = "";
+        Plants = [];
     }
 
     // Full Arg Constructor
-    public User(int userId, string userName, string password, string firstName, string lastName, string role)
+    public User(int userId, string userName, string password, string firstName, string lastName, string role, ICollection<Plant> plants)
     {
         UserId = userId;
         UserName = userName;
@@ -26,6 +28,7 @@ class User
         FirstName = firstName;
         LastName = lastName;
         Role = role;
+        Plants = plants;
     }
 
     // ToString

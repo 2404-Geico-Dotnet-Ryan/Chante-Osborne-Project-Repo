@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QdBcVegrEnQvl0vfqRHd30oNtifgVBvjuKxOSkbArSP3uTVaEuCczl7OpLxROXLO2qaAXOJe/4VX9m6Y5T6G4Q==",
+  "dgSpecHash": "hLUuI2wXfKDuyT9U36wWZeNapiCqqGyQPCNnsaBcGVvzJMp6dCcOv7I0MJFYacM1kRGmq585HZOWWEK/kLYTpA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\U88ABJ\\Revature\\Chante-Osborne-Project-Repo\\ProjectADONET\\Project.csproj",
+  "projectFilePath": "c:\\Users\\U88ABJ\\Revature\\Chante-Osborne-Project-Repo\\ProjectADONET\\Project.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\U88ABJ\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\U88ABJ\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

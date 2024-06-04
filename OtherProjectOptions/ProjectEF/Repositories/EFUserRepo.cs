@@ -1,6 +1,3 @@
-
-using Microsoft.EntityFrameworkCore;
-
 class EFUserRepo : IUserRepo
 {
     private readonly AppDbContext _context;
